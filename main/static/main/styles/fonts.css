@@ -1,0 +1,15 @@
+/* font-family: "OpenSans"; */
+@font-face {
+   font-family: "OpenSans";  
+   src: url("../fonts/open-sans/OpenSans-Regulat.ttf");
+   font-style: normal;
+   font-weight: normal;
+}
+
+/* font-family: "Uni Sans Heavy Caps""; */
+ @font-face{
+   font-family: "Uni Sans Heavy Caps";
+   src: url("../fonts/uni-sans/ofont.ru_Uni Sans Heavy Caps.ttf");
+   font-style: normal;
+   font-weight: normal;
+}

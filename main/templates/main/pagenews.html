@@ -1,0 +1,114 @@
+{% extends 'main/base.html' %}
+{% block body %}
+
+
+      <div class="news_page">
+     <div class="container">
+     <ul class="second_menu">
+                    <li><a  href="#" >Главная</a>&rsaquo;
+                    </li>
+                    <li>Новости</li>
+                </ul>
+                <div class="clear"></div>
+                 <div class="type_img">
+            <div class="jcarousel">
+                   <ul>
+                       <li> <img src="{{ news.news_picture.url }}" alt="picture" width="1024" height="576"></li>
+                       <li><img src="images/type_img1.jpeg" alt="picture" width="1024" height="576"></li>
+                   </ul>
+                   <div class="gray_box">
+						<div class="photo_video">
+							<p>4 фото</p>
+							<p>1 видео</p>
+						</div>
+						<div class="jcarousel-control">
+							<a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
+							<a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
+						</div>
+					</div>
+                    <div class="graybig_box">
+                        <p class="type_time">{{news.news_posting_time }}</p>
+                        <p class="type_visited">{{news.news_views_count}}</p>
+                        <p class="type_comment">{{news.news_comments_count}}</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="pagenews_content">
+                    <h2 class="header_road">{{news.news_title}}</h2>
+               <p>{{news.news_text}}</p>
+               <p>Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании форм развития. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки и реализации дальнейших направлений развития. Товарищи! постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Равным образом реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании форм развития.</p>
+               <p>Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения систем массового участия. Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Товарищи! сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации.</p>
+               <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также консультация с широким активом играет важную роль в формировании существенных финансовых и административных условий.</p>
+         <p class="par_share">Поделиться:</p>
+                 <a href="#"><i class="sprite sprite-vk_h"></i></a>
+                <p><span>123</span></p>
+                <a href="#"><i class="sprite sprite-z_facebook"></i></a>
+                <p><span>12k</span></p>
+          </div>
+          <h4>12 комментариев</h4>
+             <div class="list_comment">
+                 <img src="images/ava1.jpeg" alt="avatar" width="67" height="67">
+                 <p class="nickname">Алексей</p>
+                 <i class="sprite sprite-time"></i>
+                 <p class="time">12.08.2016</p>
+                 <p class="comments">Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании </p>
+                 <a href="#" class="answer">Ответить</a>
+             </div>
+             <div class="list_comment">
+                 <img src="images/ava2.jpeg" alt="avatar" width="67" height="67">
+                 <p class="nickname">Миха1976</p>
+                 <i class="sprite sprite-time"></i>
+                 <p class="time">3 часа назад</p>
+                 <p class="comments">Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании </p>
+                 <a href="#" class="answer">Ответить</a>
+             </div>
+             <div class="list_comment">
+                 <img src="images/ava3.jpeg" alt="avatar" width="67" height="67">
+                 <p class="nickname">Мастер</p>
+                 <i class="sprite sprite-time"></i>
+                 <p class="time">29 минут назад</p>
+                 <p class="comments">Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании</p>
+                 <a href="#" class="answer">Ответить</a>
+             </div>
+             <div class="list_answer">
+                 <i class="sprite sprite-forcomment"></i>
+                 <img src="images/ava4.jpeg" alt="avatar" width="67" height="67">
+                 <p class="nickname">RC GIRL</p>
+                 <i class="sprite sprite-time"></i>
+                 <p class="time">20 минут назад</p>
+                 <p class="comments">Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной</p>
+                 <a href="#" class="answer">Ответить</a>
+             </div>
+             <div class="list_comment">
+                 <img src="images/ava5.jpeg" alt="avatar" width="67" height="67">
+                 <p class="nickname">Тофик</p>
+                 <i class="sprite sprite-time"></i>
+                 <p class="time">Минуту назад</p>
+                 <p class="comments">Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании </p>
+                 <a href="#" class="answer">Ответить</a>
+             </div>
+             <div class="show_comment">
+                 <a href="#">Показать все комментарии</a>
+             </div>
+             {% if user.is_authenticated %}
+             <div class="add_comment">
+                  <img src="images/ava5.jpeg" alt="" width="67" height="67">
+                      <form class="add_comm" role="form" action="{{ news.get_absolute_url }}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'main/form_template.html' %}
+                        <!--<textarea class="news_addcomm" name="comment" cols="3" rows="1" placeholder="Добавьте комментарий" onfocus="placeholder='';" onblur="placeholder='Добавьте комментарий';">
+                        </textarea>
+                        -->
+                        <input type="submit" value="Submit1111111111111111111111111111111">
+                      </form>
+                  <a href="#" class="more_1">опубликовать</a>
+             </div>
+             {% endif %}
+             {% if not user.is_authenticated %}
+             <a href="{% url 'main:login_user' %}">
+               Залогиньтесь чтобы оставить коментарий
+             </a>
+             {% endif %}
+          </div>
+          </div>
+{% endblock %}

@@ -1,0 +1,255 @@
+{% extends 'main/base.html' %}
+{% block body %}
+
+{% if message1 %}
+    <p><strong>{{ message1 }}</strong></p>
+{% endif %}
+
+{% if message %}
+    <p><strong>{{ message }}</strong></p>
+{% endif %}
+
+<div class="jcarousel-wrapper slider">
+  <div class="jcarousel">
+    <ul>
+      <li style="background-image: url(images/banner.jpeg)">
+        <div class="for_slider1"><h1>Карта трасс</h1></div>
+        <div class="for_slider2"><h2>на rc evolution</h2></div>
+        <div class="mySlides">
+          <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что сложившаяся структура организации играет важную роль в формировании новых предложений. Таким образом новая модель организационной деятельности представляет собой интересный эксперимент</p>
+        </div>
+        <a href="#" class="more">Подробнее</a>
+      </li>
+      <li style="background-image: url(images/banner.jpeg)">
+        <div class="for_slider1"><h1>Карта трасс</h1></div>
+        <div class="for_slider2"><h2>на rc evolution</h2></div>
+        <div class="mySlides">
+          <p>Равным образом начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что укрепление и развитие структуры позволяет оценить значение направлений прогрессивного развития.</p>
+        </div>
+        <a href="#" class="more">Подробнее</a>
+      </li>
+      <li style="background-image: url(images/banner.jpeg)">
+        <div class="for_slider1"><h1>Карта трасс</h1></div>
+        <div class="for_slider2"><h2>на rc evolution</h2></div>
+        <div class="mySlides">
+          <p>Если ваша модель, по каким, либо причинам не подошла ни под один класс, не отчаивайтесь, приезжайте. Ведь именно для вас и сделан класс — Анлим. К участию в соревнованиях допускаются автомобили с колёсной формулой 4х2, 4х4, 6х6</p>
+        </div>
+        <a href="#" class="more">Подробнее</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+  <a href="#" class="jcarousel-control-prev"><i class="sprite sprite-vector_left"></i></a>
+  <a href="#" class="jcarousel-control-next"><i class="sprite sprite-vector_right"></i></a>
+  </div>
+  <p class="jcarousel-pagination"></p>
+</div>
+
+          {% load staticfiles %}
+<div class="news">
+   <div class="container">
+    <h2>Новости проекта</h2>
+      {% for news in all_news %}
+       <div class="section">
+         <div class="picture">
+         <a href="{{ news.get_absolute_url }}"><img src="{{news.news_title_picture.url}}" alt="picture" width="502" height="280" /></a>
+         </div>
+         <div class="content">
+         <i class="sprite sprite-time"></i>
+         <p class="time"> {{news.news_posting_time }}</p>
+         <h3>{{news.news_title}}</h3>
+         <p>{{news.news_anotation}}</p>
+        <a href="#" class="more_1">Подробнее</a>
+        <i class="sprite sprite-eye"></i>
+        <p class="visited">{{news.news_views_count}}</p>
+        <i class="sprite sprite-comment"></i>
+        <p class="comment">{{news.news_comments_count}}</p>
+      </div>
+     </div>
+     <div class="clear">
+     </div>
+      {% endfor %}
+
+
+<div class="event">
+  <div class="container">
+  <h2>Ближайшие мероприятия</h2>
+    <div class="event_content">
+      <i class="sprite sprite-time_w"></i>
+      <p class="time_event_w"> 12.08.2016</p>
+      <div class="event_img">
+        <div class="jcarousel">
+          <ul>
+            <li>
+              <img src="images/event_1.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_2.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_3.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_1.png" alt="picture" width="240" height="240"/>
+            </li>
+          </ul>
+        </div>
+        <div class="gray_box">
+          <div class="photo_video">
+            <p>4 фото</p>
+            <p>1 видео</p>
+          </div>
+          <div class="jcarousel-control">
+            <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
+            <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
+          </div>
+        </div>
+      </div>
+        <h3>4-ый этап Чемпионата МСК
+         по RC-Триал-Трофи 2013</h3>
+         <p class="event_p">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+        <i class="sprite sprite-eye_w"></i>
+        <p class="visited_w">7</p>
+        <i class="sprite sprite-comment_w"></i>
+        <p class="comment_w">2</p>
+        <div class="clear">
+        </div>
+        <a href="#" class="more_event">Подробнее</a>
+      </div>
+      <div class="event_content">
+        <i class="sprite sprite-time_w"></i>
+        <p class="time_event_w"> 12.08.2016</p>
+        <div class="event_img">
+        <div class="jcarousel">
+          <ul>
+            <li>
+              <img src="images/event_2.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_1.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_3.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_1.png" alt="picture" width="240" height="240"/>
+            </li>
+          </ul>
+        </div>
+        <div class="gray_box">
+          <div class="photo_video">
+            <p>4 фото</p>
+            <p>1 видео</p>
+          </div>
+          <div class="jcarousel-control">
+            <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
+            <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
+          </div>
+        </div>
+      </div>
+        <h3>4-ый этап Чемпионата МСК
+         по RC-Триал-Трофи 2013</h3>
+         <p class="event_p">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров </p>
+         <i class="sprite sprite-eye_w"></i>
+        <p class="visited_w">7</p>
+        <i class="sprite sprite-comment_w"></i>
+        <p class="comment_w">2</p>
+        <div class="clear">
+        </div>
+        <a href="#" class="more_event">Подробнее</a>
+      </div>
+      <div class="event_content">
+         <i class="sprite sprite-time_w"></i>
+         <p class="time_event_w"> 12.08.2016</p>
+        <h3>4-ый этап Чемпионата МСК
+         по RC-Триал-Трофи 2013</h3>
+         <p class="event_p">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров </p>
+         <i class="sprite sprite-eye_w"></i>
+        <p class="visited_w">7</p>
+        <i class="sprite sprite-comment_w"></i>
+        <p class="comment_w">2</p>
+        <div class="clear">
+        </div>
+        <a href="#" class="more_event">Подробнее</a>
+      </div>
+      <div class="event_content">
+        <i class="sprite sprite-time_w"></i>
+        <p class="time_event_w"> 12.08.2016</p>
+        <div class="event_img">
+        <div class="jcarousel">
+          <ul>
+            <li>
+              <img src="images/event_3.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_2.png" alt="picture" width="240" height="240"/>
+            </li>
+            <li>
+              <img src="images/event_1.png" alt="picture" width="240" height="240"/>
+            </li>
+          </ul>
+        </div>
+        <div class="gray_box">
+          <div class="photo_video">
+            <p>3 фото</p>
+          </div>
+          <div class="jcarousel-control">
+            <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
+            <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
+          </div>
+        </div>
+      </div>
+        <h3>4-ый этап Чемпионата МСК
+         по RC-Триал-Трофи 2013</h3>
+         <p class="event_p">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров </p>
+         <i class="sprite sprite-eye_w"></i>
+        <p class="visited_w">7</p>
+        <i class="sprite sprite-comment_w"></i>
+        <p class="comment_w">2</p>
+        <div class="clear">
+        </div>
+        <a href="#" class="more_event">Подробнее</a>
+        </div>
+ </div>
+</div>
+
+<div class="channel">
+   <div class="container">
+   <h2>Канал RC Evolution на</h2>
+   <div class="channel_youtube">
+   <iframe width="502" height="282" src="https://www.youtube.com/embed/vWeuIy086vY" frameborder="0" allowfullscreen>
+   </iframe>
+   </div>
+   <div class="channel_1">
+   <h3>Сборка Vaterra Ascender Blazer KIT (ч.4) — Шасси и
+     вентиляция колес — Frame, Beadlock Wheels Vent</h3>
+   <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что сложившаяся структура организации играет важную роль в формировании новых предложений. </p>
+   <a href="#">Перейти на канал</a>
+   <i class="sprite sprite-eye"></i>
+   <p class="visited_ch">7</p>
+   <i class="sprite sprite-comment"></i>
+   <p class="comment_ch">2</p>
+   </div>
+   </div>
+</div>
+
+
+<div class="couple_word">
+<div class="container">
+   <h2>пара слов об RC Evolution</h2>
+   <div class="rc_model">
+    <img src="images/rc_model.png" alt="rc_model" width="502" height="335"/>
+    <div class="forrc_model">
+    <p class="model">Эволюционируйте вместе<br>
+      с вашей RC-моделью</p>
+    </div>
+   </div>
+   <div class="rc_model_1">
+   <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что сложившаяся структура организации играет важную роль в формировании новых предложений. Таким образом новая модель организационной деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что сложившаяся структура организации играет важную роль в формировании дальнейших направлений развития.</p>
+   <a href="#" class="rc_model_2">Подробнее</a>
+   </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,185 @@
+.jcarousel-wrapper {
+    width: 100%;
+    height: 596px;
+    text-align: center;
+    position: relative;
+}
+.jcarousel-wrapper .container {
+    position: relative;
+}
+
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+.slider .jcarousel {
+    height: 596px;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+}
+.slider .jcarousel li {
+    background-size: cover;
+    height: 596px;
+}
+
+/** Carousel Controls **/
+
+.slider .jcarousel-control-prev,
+.slider .jcarousel-control-next {
+    position: absolute;
+    top: -298px;
+    width: 44px;
+    height: 40px;
+    background: url(../images/sprite/spritesheet.png) no-repeat -5px -125px;
+}
+
+.slider .jcarousel-control-prev {
+    left: 0;
+}
+
+.slider .jcarousel-control-next {
+    right: 0;
+}
+
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next.inactive {
+    opacity: .5;
+    cursor: default;
+}
+
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.jcarousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+    
+    font-size: 0;
+    
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    text-align: center;
+    
+    margin: 0 6px;
+}
+
+.jcarousel-pagination a.active {
+    background: #fff;
+}
+
+
+/** Stage container **/
+
+.connected-carousels .stage {
+    position: relative;
+}
+
+/** Navigation container **/
+
+.connected-carousels .navigation {
+    // width: 260px;
+    // margin: 20px auto;
+    position: relative;
+}
+
+/** Shared carousel styles **/
+
+.connected-carousels .carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.connected-carousels .carousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.connected-carousels .carousel li {
+    float: left;
+    margin: 0;
+}
+.goods .connected-carousels .carousel li {
+    float: left;
+    margin: 6px 6px 0 0;
+}
+.connected-carousels .carousel li:before {
+    display: none;
+}
+
+/** Stage carousel specific styles **/
+
+.connected-carousels .carousel-stage {
+    height: 400px;
+}
+
+/** Navigation carousel specific styles **/
+
+.connected-carousels .carousel-navigation {
+    height: 68px;
+    width: 100%;
+}
+
+.connected-carousels .carousel-navigation li {
+    cursor: pointer;
+    background: #000;
+}
+
+.connected-carousels .carousel-navigation li img {
+    display: block;
+}
+
+.connected-carousels .carousel-navigation li.active img {
+    opacity: .8;
+}
+
+/** Stage carousel controls **/
+.connected-carousels .prev-stage.inactive,
+.connected-carousels .next-stage.inactive,
+.connected-carousels .next-navigation.inactive,
+.connected-carousels .prev-navigation.inactive {
+    opacity: .5;
+    cursor: default;
+}
+
+
+/*vertical*/
+.connected-carousels .trial_banner .carousel-stage {
+    height: 508px;
+}
+.connected-carousels .carousel-navigation.jcarousel-vertical {
+    height: 508px;
+}
+.connected-carousels .carousel.jcarousel-vertical ul {
+    width: 100%;
+}
+.connected-carousels .jcarousel-vertical li {
+    float: none;
+    margin-bottom: 14px;
+}
