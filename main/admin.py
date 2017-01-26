@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import News_post, Advanced_user, Test_db
+from .models import News_post, Advanced_user, Comment_model
 
 
 
@@ -14,4 +14,5 @@ class News_postAdmin(admin.ModelAdmin):
 admin.site.register(News_post,News_postAdmin)
 #admin.site.register(Site_users)
 admin.site.register(Advanced_user)
-admin.site.register(Test_db)
+#admin.site.register(Test_db)
+admin.site.register(Comment_model)

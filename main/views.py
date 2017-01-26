@@ -4,8 +4,8 @@ from django.views import generic
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
-from .forms import UserForm, Comment_form, Test_Comment_form
-from .models import News_post, Advanced_user, Comment_model, Test_db
+from .forms import UserForm, Comment_form
+from .models import News_post, Advanced_user, Comment_model
 # CBV
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView
@@ -14,41 +14,43 @@ from django.views.generic.edit import CreateView
 def index(request):
     all_news = News_post.objects.all()
     context = {
-    'all_news':all_news,
+    'all_news': all_news,
     }
     return render(request, 'main/index.html', context)
 
 
 def news_details(request, slug):
-    news = News_post.objects.get(slug=slug)
-    form = Test_Comment_form()
-    context = {
-        'news': news,
-        'form': form,
-    }
     if request.method == 'GET':
+        news = News_post.objects.get(slug=slug)
+        form = Comment_form()
+        user_comments = Comment_model.objects.filter(article=news.pk)
+        comment_count = len(user_comments)
+        context = {
+            'news': news,
+            'form': form,
+            'user_comments': user_comments,
+            'comment_count': comment_count,
+        }
         return render(request, 'main/pagenews.html', context)
     else:
-        form = Test_Comment_form(request.POST or None)
+        form = Comment_form(request.POST or None)
         if form.is_valid():
-            test_comment = form.save(commit=False)
-            test_comment.save()
-        #form = request.POST['comment']
-        #com = Test_db(comment_text=form)
-        #com.save()
-        #form = Comment_form(request.POST or None)
-        #if form.is_valid():
-        #    comment = form.save(commit=False)
-        #    comment.save()
+            comment = form.save(commit=False)
+            comment.user_nickname = Advanced_user.objects.get(pk=request.user.pk)
+            comment.article = get_object_or_404(News_post, slug=slug)
+            comment.save()
+
+        news = News_post.objects.get(slug=slug)
+        form = Comment_form()
+        user_comments = Comment_model.objects.filter(article=news.pk)
+        comment_count = len(user_comments)
+        context = {
+            'news': news,
+            'form': form,
+            'user_comments': user_comments,
+            'comment_count': comment_count,
+        }
         return render(request, 'main/pagenews.html', context)
-
-
-# def add_comment(request):
-#     form = Comment_form(request.POST or None)
-#     if form.is_valid():
-#         comment = form.save(commit=False)
-#         comment.save()
-#    return (render, 'main/pagenews.html')
 
 
 #class ArticleDetail(DetailView):

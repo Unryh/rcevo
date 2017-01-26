@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib.auth.models import User
 from django import forms
-from .models import Advanced_user, Comment_model, Test_db
+from .models import Advanced_user, Comment_model
 
 
 class UserForm(forms.ModelForm):
@@ -9,7 +9,7 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = Advanced_user
-        fields = ['username', 'password', 'avatar']
+        fields = ['username', 'password', 'email', 'avatar']
 
 
 class Comment_form(forms.ModelForm):
@@ -18,10 +18,9 @@ class Comment_form(forms.ModelForm):
         model = Comment_model
         fields = ['text']
 
-class Test_Comment_form(forms.ModelForm):
 
-    class Meta:
-        # model = Advanced_user
-        # fields = ['avatar']
-        model = Test_db
-        fields = ['comment_text']
+# class Test_Comment_form(forms.ModelForm):
+#
+#     class Meta:
+#         model = Test_db
+#         fields = ['comment_text']

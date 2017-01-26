@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
+from datetime import datetime
 
 
 class News_post(models.Model):
@@ -22,28 +23,30 @@ class News_post(models.Model):
     def get_absolute_url(self):
         return reverse('main:news_details', kwargs={'slug':self.slug})
 
-# class Site_users(models.Model):
-#    avatar = models.FileField(upload_to='media', null=True, blank=True)
-#    username = models.CharField(max_length=50)
-#    email = models.EmailField(max_length=254)
-#    password = models.CharField(max_length=50)
-
 
 class Advanced_user(User):
-    #testirovanit = models.CharField(max_length=100, blank=True)
-    avatar = models.FileField(upload_to='media', blank = True)
+    avatar = models.FileField(upload_to='media', blank=True)
 
 
 class Comment_model(models.Model):
     user_nickname = models.ForeignKey(Advanced_user, models.CASCADE,)
-    parent_object = models.ForeignKey(News_post, models.CASCADE,)
+    article = models.ForeignKey(News_post, models.CASCADE,)
+    parent = models.ForeignKey('self', blank=True, null=True)
     text = models.TextField(max_length=1000)
-
-
-class Test_db(models.Model):
-    test_user_nickname = models.ForeignKey(Advanced_user, models.CASCADE, default='common_user')
-    comment_text = models.TextField(max_length=1000)
+    time_created = models.DateTimeField(auto_now_add='true')
 
     def __unicode__(self):
-        return self.comment_text
+        return self.text[:30]
+
+    def avatar_print(self):
+        a = Advanced_user.objects.get(username=self.user_nickname)
+        return a.avatar.url
+
+# class Test_db(models.Model):
+#     super_test_user_nickname = models.TextField(max_length=1000, default='supertest')
+#     test_user_nickname = models.ForeignKey(Advanced_user, models.CASCADE, default='2') #pk2 - unryh, pk4 - anna
+#     comment_text = models.TextField(max_length=1000)
+#
+#     def __unicode__(self):
+#         return self.comment_text
 
