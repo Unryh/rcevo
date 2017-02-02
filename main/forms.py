@@ -19,8 +19,3 @@ class Comment_form(forms.ModelForm):
         fields = ['text']
 
 
-# class Test_Comment_form(forms.ModelForm):
-#
-#     class Meta:
-#         model = Test_db
-#         fields = ['comment_text']

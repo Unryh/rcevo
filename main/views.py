@@ -5,7 +5,8 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm, Comment_form
-from .models import News_post, Advanced_user, Comment_model
+from .models import News_post, Advanced_user, Comment_model, Pictures_for_news
+
 # CBV
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView
@@ -19,18 +20,36 @@ def index(request):
     return render(request, 'main/index.html', context)
 
 
+def news_information(slug):
+    # обновляем счетчик просмотра
+    news = News_post.objects.get(slug=slug)
+    News_post.objects.filter(slug=slug).update(news_views_count=news.news_views_count + 1)
+
+    # достаем всю необходимую для страницы информацию
+    news = News_post.objects.get(slug=slug)
+    form = Comment_form()
+    user_comments = Comment_model.objects.filter(article=news.pk)
+    comment_count = len(user_comments)
+    pictures = Pictures_for_news.objects.filter(parent_news=news.pk)
+
+    # пересчитываю количество комментариев на странице
+    news.news_comments_count = comment_count
+    news.save()
+
+
+
+    context = {
+        'news': news,
+        'form': form,
+        'user_comments': user_comments,
+        'pictures': pictures,
+    }
+    return context
+
+
 def news_details(request, slug):
     if request.method == 'GET':
-        news = News_post.objects.get(slug=slug)
-        form = Comment_form()
-        user_comments = Comment_model.objects.filter(article=news.pk)
-        comment_count = len(user_comments)
-        context = {
-            'news': news,
-            'form': form,
-            'user_comments': user_comments,
-            'comment_count': comment_count,
-        }
+        context = news_information(slug)
         return render(request, 'main/pagenews.html', context)
     else:
         form = Comment_form(request.POST or None)
@@ -40,16 +59,7 @@ def news_details(request, slug):
             comment.article = get_object_or_404(News_post, slug=slug)
             comment.save()
 
-        news = News_post.objects.get(slug=slug)
-        form = Comment_form()
-        user_comments = Comment_model.objects.filter(article=news.pk)
-        comment_count = len(user_comments)
-        context = {
-            'news': news,
-            'form': form,
-            'user_comments': user_comments,
-            'comment_count': comment_count,
-        }
+        context = news_information(slug)
         return render(request, 'main/pagenews.html', context)
 
 

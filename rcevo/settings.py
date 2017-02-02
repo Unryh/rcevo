@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'track_map.apps.TrackMapConfig',
     'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
