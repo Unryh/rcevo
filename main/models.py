@@ -7,14 +7,14 @@ from datetime import datetime
 
 
 class News_post(models.Model):
-    news_title_picture = models.FileField()                        # done
-    news_title = models.CharField(max_length=100)                  # done
-    slug = models.SlugField(max_length=200)                        # done
-    news_posting_time = models.DateTimeField(auto_now_add='true')  # done
-    news_anotation = models.TextField(max_length=200)              # done
-    news_text = models.TextField(max_length=10000)                 # done
-    news_views_count = models.IntegerField(default=0)              # done
-    news_comments_count = models.IntegerField(default=0)           # done
+    news_title_picture = models.FileField()
+    news_title = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=200)
+    news_posting_time = models.DateTimeField(auto_now_add='true')
+    news_anotation = models.TextField(max_length=200)
+    news_text = models.TextField(max_length=10000)
+    news_views_count = models.IntegerField(default=0)
+    news_comments_count = models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.news_title

@@ -10,67 +10,84 @@
 {% endif %}
 
 <div class="jcarousel-wrapper slider">
-  <div class="jcarousel">
-    <ul>
-      <li style="background-image: url(images/banner.jpeg)">
-        <div class="for_slider1"><h1>Карта трасс</h1></div>
-        <div class="for_slider2"><h2>на rc evolution</h2></div>
-        <div class="mySlides">
-          <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что сложившаяся структура организации играет важную роль в формировании новых предложений. Таким образом новая модель организационной деятельности представляет собой интересный эксперимент</p>
-        </div>
-        <a href="#" class="more">Подробнее</a>
-      </li>
-      <li style="background-image: url(images/banner.jpeg)">
-        <div class="for_slider1"><h1>Карта трасс</h1></div>
-        <div class="for_slider2"><h2>на rc evolution</h2></div>
-        <div class="mySlides">
-          <p>Равным образом начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что укрепление и развитие структуры позволяет оценить значение направлений прогрессивного развития.</p>
-        </div>
-        <a href="#" class="more">Подробнее</a>
-      </li>
-      <li style="background-image: url(images/banner.jpeg)">
-        <div class="for_slider1"><h1>Карта трасс</h1></div>
-        <div class="for_slider2"><h2>на rc evolution</h2></div>
-        <div class="mySlides">
-          <p>Если ваша модель, по каким, либо причинам не подошла ни под один класс, не отчаивайтесь, приезжайте. Ведь именно для вас и сделан класс — Анлим. К участию в соревнованиях допускаются автомобили с колёсной формулой 4х2, 4х4, 6х6</p>
-        </div>
-        <a href="#" class="more">Подробнее</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="container">
-  <a href="#" class="jcarousel-control-prev"><i class="sprite sprite-vector_left"></i></a>
-  <a href="#" class="jcarousel-control-next"><i class="sprite sprite-vector_right"></i></a>
-  </div>
-  <p class="jcarousel-pagination"></p>
+	<div class="jcarousel">
+		<ul>
+			<li style="background-image: url(images/banner.jpeg)">
+				<div class="for_slider1">
+					<h1>Карта трасс</h1>
+				</div>
+				<div class="for_slider2">
+					<h2>на rc evolution</h2>
+				</div>
+				<div class="mySlides">
+					<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что сложившаяся структура организации играет важную роль в формировании новых предложений. Таким образом новая модель организационной деятельности представляет собой интересный эксперимент</p>
+				</div>
+				<a href="#" class="more">Подробнее</a>
+			</li>
+			<li style="background-image: url(images/banner.jpeg)">
+				<div class="for_slider1">
+					<h1>Карта трасс</h1>
+				</div>
+				<div class="for_slider2">
+					<h2>на rc evolution</h2>
+				</div>
+				<div class="mySlides">
+					<p>Равным образом начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что укрепление и развитие структуры позволяет оценить значение направлений прогрессивного развития.</p>
+				</div>
+				<a href="#" class="more">Подробнее</a>
+			</li>
+			<li style="background-image: url(images/banner.jpeg)">
+				<div class="for_slider1">
+					<h1>Карта трасс</h1>
+				</div>
+				<div class="for_slider2">
+					<h2>на rc evolution</h2>
+				</div>
+				<div class="mySlides">
+					<p>Если ваша модель, по каким, либо причинам не подошла ни под один класс, не отчаивайтесь, приезжайте. Ведь именно для вас и сделан класс — Анлим. К участию в соревнованиях допускаются автомобили с колёсной формулой 4х2, 4х4, 6х6</p>
+				</div>
+				<a href="#" class="more">Подробнее</a>
+			</li>
+		</ul>
+	</div>
+	<div class="container">
+		<a href="#" class="jcarousel-control-prev">
+			<i class="sprite sprite-vector_left"></i>
+		</a>
+		<a href="#" class="jcarousel-control-next">
+			<i class="sprite sprite-vector_right"></i>
+		</a>
+	</div>
+	<p class="jcarousel-pagination"></p>
 </div>
 
           {% load staticfiles %}
 <div class="news">
-   <div class="container">
     <h2>Новости проекта</h2>
+
+
       {% for news in all_news %}
        <div class="section">
-         <div class="picture">
-         <a href="{{ news.get_absolute_url }}"><img src="{{news.news_title_picture.url}}" alt="picture" width="502" height="280" /></a>
-         </div>
-         <div class="content">
-         <i class="sprite sprite-time"></i>
-         <p class="time"> {{ news.news_posting_time }}</p>
-         <h3>{{ news.news_title }}</h3>
-         <p>{{ news.news_anotation }}</p>
-        <a href="#" class="more_1">Подробнее</a>
-        <i class="sprite sprite-eye"></i>
-        <p class="visited">{{ news.news_views_count }}</p>
-        <i class="sprite sprite-comment"></i>
-        <p class="comment">{{ news.news_comments_count }}</p>
-      </div>
-     </div>
+        <div class="picture">
+            <a href="{{ news.get_absolute_url }}"><img src="{{news.news_title_picture.url}}" alt="picture" width="502" height="280" /></a>
+        </div>
+            <div class="content">
+                <i class="sprite sprite-time"></i>
+                <p class="time"> {{ news.news_posting_time }}</p>
+                <h3>{{ news.news_title }}</h3>
+                <p>{{ news.news_anotation }}</p>
+                <a href="#" class="more_1">Подробнее</a>
+                <i class="sprite sprite-eye"></i>
+                <p class="visited">{{ news.news_views_count }}</p>
+                <i class="sprite sprite-comment"></i>
+                <p class="comment">{{ news.news_comments_count }}</p>
+            </div>
+       </div>
      <div class="clear">
      </div>
       {% endfor %}
 
+{% comment %}
 
 <div class="event">
   <div class="container">
@@ -213,6 +230,7 @@
         </div>
  </div>
 </div>
+{% endcomment %}
 
 <div class="channel">
    <div class="container">
@@ -226,10 +244,6 @@
      вентиляция колес — Frame, Beadlock Wheels Vent</h3>
    <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что сложившаяся структура организации играет важную роль в формировании новых предложений. </p>
    <a href="#">Перейти на канал</a>
-   <i class="sprite sprite-eye"></i>
-   <p class="visited_ch">7</p>
-   <i class="sprite sprite-comment"></i>
-   <p class="comment_ch">2</p>
    </div>
    </div>
 </div>
@@ -239,7 +253,7 @@
 <div class="container">
    <h2>пара слов об RC Evolution</h2>
    <div class="rc_model">
-    <img src="images/rc_model.png" alt="rc_model" width="502" height="335"/>
+    <img src="{% static 'main/images/rc_model.png' %}" alt="rc_model" width="502" height="335"/>
     <div class="forrc_model">
     <p class="model">Эволюционируйте вместе<br>
       с вашей RC-моделью</p>

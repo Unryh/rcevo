@@ -6,10 +6,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm, Comment_form
 from .models import News_post, Advanced_user, Comment_model, Pictures_for_news
-
-# CBV
-from django.views.generic import DetailView, ListView
-from django.views.generic.edit import CreateView
+from django.contrib.auth.models import User
 
 
 def index(request):
@@ -27,7 +24,7 @@ def news_information(slug):
 
     # достаем всю необходимую для страницы информацию
     news = News_post.objects.get(slug=slug)
-    form = Comment_form()
+    form = Comment_form(initial={'text': 'Добавить комментарий'})
     user_comments = Comment_model.objects.filter(article=news.pk)
     comment_count = len(user_comments)
     pictures = Pictures_for_news.objects.filter(parent_news=news.pk)
@@ -63,14 +60,11 @@ def news_details(request, slug):
         return render(request, 'main/pagenews.html', context)
 
 
-#class ArticleDetail(DetailView):
-    #model = Advanced_user
-
-    #def get_queryset(self):
-        #qs = super(ArticleDetail, self).get_queryset()
-        #if not self.request.user.is_superuser:
-        #    qs = qs.filter(is_published=True)
-        #return qs
+# def social_redirect(request):
+#     a = User.objects.get(pk=request.user.pk)
+#     b = Advanced_user(username=a.username, password=a.password, email=a.email, avatar='blank')
+#     b.save()
+#     return index(request)
 
 
 def register_user(request):
@@ -104,8 +98,8 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return redirect('main: index')
-                #return render(request, 'main/index.html')
+                #return redirect('main: index')
+                return render(request, 'main/index.html')
             else:
                 return render(request, 'main/login.html', {'message': 'U Hawe been disabled'})
         else:
