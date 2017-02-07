@@ -104,8 +104,8 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                #return redirect('main: index')
-                return render(request, 'main/index.html')
+                return redirect('main:index')
+                # return render(request, 'main/index.html')
             else:
                 return render(request, 'main/login.html', {'message': 'U Hawe been disabled'})
         else:

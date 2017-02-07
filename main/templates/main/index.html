@@ -9,10 +9,12 @@
     <p><strong>{{ message }}</strong></p>
 {% endif %}
 
+{% load staticfiles %}
+
 <div class="jcarousel-wrapper slider">
 	<div class="jcarousel">
 		<ul>
-			<li style="background-image: url(images/banner.jpeg)">
+			<li style="background-image: url({% static 'main/images/banner.jpeg' %})">
 				<div class="for_slider1">
 					<h1>Карта трасс</h1>
 				</div>
@@ -24,7 +26,7 @@
 				</div>
 				<a href="#" class="more">Подробнее</a>
 			</li>
-			<li style="background-image: url(images/banner.jpeg)">
+			<li style="background-image: url({% static 'main/images/banner.jpeg' %}">
 				<div class="for_slider1">
 					<h1>Карта трасс</h1>
 				</div>
@@ -36,7 +38,7 @@
 				</div>
 				<a href="#" class="more">Подробнее</a>
 			</li>
-			<li style="background-image: url(images/banner.jpeg)">
+			<li style="background-image: url({% static 'main/images/banner.jpeg' %})">
 				<div class="for_slider1">
 					<h1>Карта трасс</h1>
 				</div>

@@ -7,7 +7,7 @@
 	<div class="container">
 		<ul class="second_menu">
 			<li>
-				<a  href="#" >Главная</a>&rsaquo;
+				<a  href="{% url 'main:index' %}" >Главная</a>&rsaquo;
 			</li>
 			<li>Новости</li>
 		</ul>
@@ -90,7 +90,12 @@
 						</div>
              {% endif %}
              {% if not user.is_authenticated %}
-                 <a href="{% url 'main:login_user' %}">вторизируйтесь чтобы оставить коментарий</a>
+                 <div class="add_comment">
+                     <br>
+                     <a href="{% url 'main:login_user' %}">Авторизируйтесь чтобы оставить коментарий</a>
+                     <br>
+                     <br>
+                 </div>
              {% endif %}
 
 					</div>

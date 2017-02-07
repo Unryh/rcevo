@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="040f35da-44e9-4f6f-bdfd-c8eca89f327c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/123.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/123_0eI27dd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_7KuGUmV.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_9j8QryV.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_Gs7pIp4.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_Ngrbq5K.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_dD8UM8c.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_hzAqtOF.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_icUaMVl.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_lDcpXFV.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_t7v8zeb.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_wDZHc0t.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/IMG_9585_zWeytu9.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Jack111.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_1_ewHLV52.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_1_uicmXHn.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_3DQpibU.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_3HeB4ug.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_4qpPc2c.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_EKgC9w9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_Fbi8ruZ.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_M983RIX.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_M9Nj2Jh.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_WtVvqrl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_XpGbL4O.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_a7BWUa6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_bbkA6o8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_o9eS6EA.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/Screenshot_2_tVE068i.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/greciya-1920x1200-14850093.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/greciya-1920x1200-14850093_71Po8pR.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/greciya-1920x1200-14850093_DQlPfsj.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/greciya-1920x1200-14850093_Jsv7wcZ.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/greciya-1920x1200-14850093_r54nvMA.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/jack.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/реквизиты_жовтневая.tif" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/forms.py" afterPath="$PROJECT_DIR$/main/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/base.html" afterPath="$PROJECT_DIR$/main/templates/main/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/index.html" afterPath="$PROJECT_DIR$/main/templates/main/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/pagenews.html" afterPath="$PROJECT_DIR$/main/templates/main/pagenews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
@@ -85,8 +45,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="45" column="48" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="48" />
+            <state relative-caret-position="1339">
+              <caret line="105" column="36" lean-forward="true" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
               <folding>
                 <element signature="e#25#57#0" expanded="true" />
               </folding>
@@ -106,11 +66,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/templates/main/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="40" column="83" lean-forward="false" selection-start-line="40" selection-start-column="83" selection-end-line="40" selection-end-column="83" />
+              <folding>
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="banner.jpeg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/static/main/images/banner.jpeg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/templates/main/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="186" column="50" lean-forward="false" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pagenews.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/templates/main/pagenews.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="60" lean-forward="false" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+            <state relative-caret-position="453">
+              <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -186,6 +176,9 @@
       <find>user_nickname</find>
       <find>подро</find>
       <find>4 фото</find>
+      <find>staticfiles</find>
+      <find>banner.jpeg</find>
+      <find>static</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,16 +202,16 @@
         <option value="$PROJECT_DIR$/track_map/admin.py" />
         <option value="$PROJECT_DIR$/main/static/main/styles/style.css" />
         <option value="$PROJECT_DIR$/main/templates/main/Back_up.html" />
-        <option value="$PROJECT_DIR$/main/templates/main/base.html" />
         <option value="$PROJECT_DIR$/rcevo/urls.py" />
         <option value="$PROJECT_DIR$/main/urls.py" />
         <option value="$PROJECT_DIR$/rcevo/settings.py" />
         <option value="$PROJECT_DIR$/main/forms.py" />
         <option value="$PROJECT_DIR$/rcevoenv/lib/python2.7/site-packages/allauth/account/auth_backends.py" />
         <option value="$PROJECT_DIR$/main/models.py" />
+        <option value="$PROJECT_DIR$/main/templates/main/base.html" />
         <option value="$PROJECT_DIR$/main/templates/main/index.html" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/main/templates/main/pagenews.html" />
+        <option value="$PROJECT_DIR$/main/views.py" />
       </list>
     </option>
   </component>
@@ -321,38 +314,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -398,6 +359,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workrcevo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workrcevo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -837,7 +824,7 @@
     <frame x="63" y="24" width="1857" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34124792" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16399778" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.49777213" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32044762" sideWeight="0.5056543" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -897,13 +884,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rcevoenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rcevoenv/local/lib/python2.7/site-packages/django/db/backends/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1081,14 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/templates/main/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="84" column="51" lean-forward="false" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rcevo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1104,7 +1076,7 @@
         <state relative-caret-position="162">
           <caret line="10" column="67" lean-forward="false" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1212,14 +1184,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/templates/main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="78" column="52" lean-forward="false" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -1230,18 +1194,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/static/main/images/banner.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/templates/main/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="186" column="50" lean-forward="false" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/templates/main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="40" column="83" lean-forward="false" selection-start-line="40" selection-start-column="83" selection-end-line="40" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/templates/main/pagenews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="60" lean-forward="false" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+        <state relative-caret-position="453">
+          <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="45" column="48" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="48" />
+        <state relative-caret-position="1339">
+          <caret line="105" column="36" lean-forward="true" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
           <folding>
             <element signature="e#25#57#0" expanded="true" />
           </folding>
