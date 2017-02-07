@@ -8,6 +8,8 @@ from .forms import UserForm, Comment_form
 from .models import News_post, Advanced_user, Comment_model, Pictures_for_news
 from django.contrib.auth.models import User
 
+from django.contrib.auth import get_user_model
+
 
 def index(request):
     all_news = News_post.objects.all()
@@ -28,6 +30,7 @@ def news_information(slug):
     user_comments = Comment_model.objects.filter(article=news.pk)
     comment_count = len(user_comments)
     pictures = Pictures_for_news.objects.filter(parent_news=news.pk)
+    number_of_pictures = len(pictures)
 
     # пересчитываю количество комментариев на странице
     news.news_comments_count = comment_count
@@ -40,6 +43,7 @@ def news_information(slug):
         'form': form,
         'user_comments': user_comments,
         'pictures': pictures,
+        'number_of_pictures': number_of_pictures,
     }
     return context
 
@@ -52,6 +56,8 @@ def news_details(request, slug):
         form = Comment_form(request.POST or None)
         if form.is_valid():
             comment = form.save(commit=False)
+            # current_user_model = get_user_model()
+            # comment.user_nickname = current_user_model.objects.get(pk=request.user.pk)
             comment.user_nickname = Advanced_user.objects.get(pk=request.user.pk)
             comment.article = get_object_or_404(News_post, slug=slug)
             comment.save()
