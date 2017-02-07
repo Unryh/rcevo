@@ -1,489 +1,595 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="ru">
-<!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="ru" class="lt-ie9 lt-ie8 lt-ie7">
+	<![endif]-->
+	<!--[if IE 7]>
+	<html lang="ru" class="lt-ie9 lt-ie8">
+		<![endif]-->
+		<!--[if IE 8]>
+		<html lang="ru" class="lt-ie9">
+			<![endif]-->
+			<!--[if gt IE 8]>
+			<!-->
+			<html lang="ru">
+				<!--
+				<![endif]-->
 
 {% extends 'main/base.html' %}
 {% block body %}
 
-<body>
 
-    <div class="pick">
-    <div class="container">
-        <h1>Карта трасс</h1>
-        <div class="select_3">
-           <div class="select_1">
-        <p class="choice">трасса для:</p>
-        <ul class="select_track">
-            <li><span class="either">Любая</span></li>
-            <li><span class="trofi active">Трофи</span></li>
-            <li><span class="shosse">Шоссейная</span></li>
-        </ul>
-        <div class="clear"></div>
-        <ul class="select_track">
-            <li><span class="off_road active">Off-road</span></li>
-            <li><span class="turing">Туринг</span></li>
-            <li><span class="drift">Дрифт</span></li>
-        </ul>
-        <div class="clear"></div>
-        <p class="radius">радиус поиска:</p>
-        <ul class="select_radius">
-            <li><span>10 км</span></li>
-            <li><span class="active">50 км</span></li>
-            <li><span>100 км</span></li>
-        </ul>
-            </div>
-            <div class="select_2">
-        <p class="place_1">место:</p>
-        <form action="#" method="post" class="select_place">
-            <input type="text" name="place"
+				<body>
+					<div class="pick">
+						<div class="container">
+							<h1>Карта трасс</h1>
+							<div class="select_3">
+								<div class="select_1">
+									<p class="choice">трасса для:</p>
+									<ul class="select_track">
+										<li>
+											<span class="either">Любая</span>
+										</li>
+										<li>
+											<span class="trofi active">Трофи</span>
+										</li>
+										<li>
+											<span class="shosse">Шоссейная</span>
+										</li>
+									</ul>
+									<div class="clear"></div>
+									<ul class="select_track">
+										<li>
+											<span class="off_road active">Off-road</span>
+										</li>
+										<li>
+											<span class="turing">Туринг</span>
+										</li>
+										<li>
+											<span class="drift">Дрифт</span>
+										</li>
+									</ul>
+									<div class="clear"></div>
+									<p class="radius">радиус поиска:</p>
+									<ul class="select_radius">
+										<li>
+											<span>10 км</span>
+										</li>
+										<li>
+											<span class="active">50 км</span>
+										</li>
+										<li>
+											<span>100 км</span>
+										</li>
+									</ul>
+								</div>
+								<div class="select_2">
+									<p class="place_1">место:</p>
+									<form action="#" method="post" class="select_place">
+										<input type="text" name="place"
             placeholder="Например: Московская область" onfocus="placeholder=''" onblur="Например: Московская область';" >
-        </form>
-        <a href="#" class="find">Найти</a>
-        <a href="#" class="reset_filter">Сбросить фильтр</a>
-        </div>
-        </div>
-        </div>
-    </div>
-
-
-    <div class="map" id="map" style="height: 415px;"></div>
-
-    <div class="section_map">
-       <div class="container">
-       <h2>Найдено 14 трасс</h2>
-        <div class="section_map_1">
-        <div class="par">
-            <div class="section_map_picture">
-            <img src="images/picture_map1.png" alt="picture" width="504" height="280">
-            <div class="par_graybox">
-             <p class="par_trofi">Трофи</p>
-                <p class="par_drift">Дрифт</p>
-            </div>
-            </div>
-            <a href="#"><h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3></a>
-            <p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
+                                    </form>
+										<a href="#" class="find">Найти</a>
+										<a href="#" class="reset_filter">Сбросить фильтр</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="map" id="map" style="height: 415px;"></div>
+						<div class="section_map">
+							<div class="container">
+								<h2>Найдено 14 трасс</h2>
+								<div class="section_map_1">
+									<div class="par">
+										<div class="section_map_picture">
+											<img src="images/picture_map1.png" alt="picture" width="504" height="280">
+												<div class="par_graybox">
+													<p class="par_trofi">Трофи</p>
+													<p class="par_drift">Дрифт</p>
+												</div>
+											</div>
+											<a href="#">
+												<h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3>
+											</a>
+											<p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
 Крылатское</p>
-            <p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
-            <p class="par_gone">12 прошло</p>
-            <p class="par_announce">14 анонсов</p>
-            <p class="par_share">Поделиться:</p>
-            <ul class="share">
-                <li><a href="#"><i class="sprite sprite-z_facebook"></i></a></li>
-                <li><a href="#"><i class="sprite sprite-vk_h"></i></a></li>
-            </ul>
-        </div>
-        <div class="par">
-            <div class="section_map_picture">
-            <img src="images/picture_map2.png" alt="picture" width="504" height="280">
-            <div class="par_graybox">
-             <p class="par_trofi">Трофи</p>
-                <p class="par_drift">Дрифт</p>
-            </div>
-            </div>
-            <a href="#"><h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3></a>
-            <p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
+											<p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
+											<p class="par_gone">12 прошло</p>
+											<p class="par_announce">14 анонсов</p>
+											<p class="par_share">Поделиться:</p>
+											<ul class="share">
+												<li>
+													<a href="#">
+														<i class="sprite sprite-z_facebook"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="sprite sprite-vk_h"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="par">
+											<div class="section_map_picture">
+												<img src="images/picture_map2.png" alt="picture" width="504" height="280">
+													<div class="par_graybox">
+														<p class="par_trofi">Трофи</p>
+														<p class="par_drift">Дрифт</p>
+													</div>
+												</div>
+												<a href="#">
+													<h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3>
+												</a>
+												<p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
 Крылатское</p>
-            <p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
-            <p class="par_gone">12 прошло</p>
-            <p class="par_announce">14 анонсов</p>
-            <p class="par_share">Поделиться:</p>
-            <ul class="share">
-                <li><a href="#"><i class="sprite sprite-z_facebook"></i></a></li>
-                <li><a href="#"><i class="sprite sprite-vk_h"></i></a></li>
-            </ul>
-        </div>
-        <div class="par">
-            <div class="section_map_picture">
-            <img src="images/picture_map3.png" alt="picture" width="504" height="280">
-            <div class="par_graybox">
-             <p class="par_trofi">Трофи</p>
-                <p class="par_drift">Дрифт</p>
-            </div>
-            </div>
-            <a href="#"><h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3></a>
-            <p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
+												<p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
+												<p class="par_gone">12 прошло</p>
+												<p class="par_announce">14 анонсов</p>
+												<p class="par_share">Поделиться:</p>
+												<ul class="share">
+													<li>
+														<a href="#">
+															<i class="sprite sprite-z_facebook"></i>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<i class="sprite sprite-vk_h"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="par">
+												<div class="section_map_picture">
+													<img src="images/picture_map3.png" alt="picture" width="504" height="280">
+														<div class="par_graybox">
+															<p class="par_trofi">Трофи</p>
+															<p class="par_drift">Дрифт</p>
+														</div>
+													</div>
+													<a href="#">
+														<h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3>
+													</a>
+													<p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
 Крылатское</p>
-            <p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
-            <p class="par_gone">12 прошло</p>
-            <p class="par_announce">14 анонсов</p>
-            <p class="par_share">Поделиться:</p>
-            <ul class="share">
-                <li><a href="#"><i class="sprite sprite-z_facebook"></i></a></li>
-                <li><a href="#"><i class="sprite sprite-vk_h"></i></a></li>
-            </ul>
-        </div>
-        <div class="par">
-            <div class="section_map_picture">
-            <img src="images/picture_map4.png" alt="picture" width="504" height="280">
-            <div class="par_graybox">
-             <p class="par_trofi">Трофи</p>
-                <p class="par_drift">Дрифт</p>
-            </div>
-            </div>
-            <h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3>
-            <p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
+													<p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
+													<p class="par_gone">12 прошло</p>
+													<p class="par_announce">14 анонсов</p>
+													<p class="par_share">Поделиться:</p>
+													<ul class="share">
+														<li>
+															<a href="#">
+																<i class="sprite sprite-z_facebook"></i>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="sprite sprite-vk_h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="par">
+													<div class="section_map_picture">
+														<img src="images/picture_map4.png" alt="picture" width="504" height="280">
+															<div class="par_graybox">
+																<p class="par_trofi">Трофи</p>
+																<p class="par_drift">Дрифт</p>
+															</div>
+														</div>
+														<h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3>
+														<p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
 Крылатское</p>
-            <p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
-            <p class="par_gone">12 прошло</p>
-            <p class="par_announce">14 анонсов</p>
-            <p class="par_share">Поделиться:</p>
-            <ul class="share">
-                <li><a href="#"><i class="sprite sprite-z_facebook"></i></a></li>
-                <li><a href="#"><i class="sprite sprite-vk_h"></i></a></li>
-            </ul>
-        </div>
-        <div class="par">
-            <div class="section_map_picture">
-            <img src="images/picture_map5.png" alt="picture" width="504" height="280">
-           <div class="par_graybox">
-             <p class="par_trofi">Трофи</p>
-                <p class="par_drift">Дрифт</p>
-            </div>
-            </div>
-            <a href="#"><h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3></a>
-            <p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
+														<p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
+														<p class="par_gone">12 прошло</p>
+														<p class="par_announce">14 анонсов</p>
+														<p class="par_share">Поделиться:</p>
+														<ul class="share">
+															<li>
+																<a href="#">
+																	<i class="sprite sprite-z_facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<i class="sprite sprite-vk_h"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+													<div class="par">
+														<div class="section_map_picture">
+															<img src="images/picture_map5.png" alt="picture" width="504" height="280">
+																<div class="par_graybox">
+																	<p class="par_trofi">Трофи</p>
+																	<p class="par_drift">Дрифт</p>
+																</div>
+															</div>
+															<a href="#">
+																<h3 class="header_par">Off-road трасса клуба RC2 в Крылатском</h3>
+															</a>
+															<p class="par_address">Россия, Москва, Улица Крылатская дом 9. Трасса находится в районе
 Крылатское</p>
-            <p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
-            <p class="par_gone">12 прошло</p>
-            <p class="par_announce">14 анонсов</p>
-            <p class="par_share">Поделиться:</p>
-            <ul class="share">
-                <li><a href="#"><i class="sprite sprite-z_facebook"></i></a></li>
-                <li><a href="#"><i class="sprite sprite-vk_h"></i></a></li>
-            </ul>
-        </div>
-            <a href="#" class="show_more"> показать еще</a>
-    </div>
-        <div class="section_map_2">
-                 <h3 class="second_map">Ближайшие события
+															<p class="par_par">Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров требуют определения и уточнения модели развития. Повседневная практика показывает, что </p>
+															<p class="par_gone">12 прошло</p>
+															<p class="par_announce">14 анонсов</p>
+															<p class="par_share">Поделиться:</p>
+															<ul class="share">
+																<li>
+																	<a href="#">
+																		<i class="sprite sprite-z_facebook"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="sprite sprite-vk_h"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<a href="#" class="show_more"> показать еще</a>
+													</div>
+													<div class="section_map_2">
+														<h3 class="second_map">Ближайшие события
                         на отобранных трассах</h3>
-          <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <div class="event_img">
-                        <div class="jcarousel">
-                            <ul>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_2.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_3.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gray_box">
-                            <div class="photo_video">
-                                <p>4 фото</p>
-                                <p>1 видео</p>
-                            </div>
-                            <div class="jcarousel-control">
-                                <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
-                                <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <div class="event_img">
-                        <div class="jcarousel">
-                            <ul>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_2.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_3.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gray_box">
-                            <div class="photo_video">
-                                <p>4 фото</p>
-                                <p>1 видео</p>
-                            </div>
-                            <div class="jcarousel-control">
-                                <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
-                                <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <div class="event_img">
-                        <div class="jcarousel">
-                            <ul>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_2.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_3.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gray_box">
-                            <div class="photo_video">
-                                <p>4 фото</p>
-                                <p>1 видео</p>
-                            </div>
-                            <div class="jcarousel-control">
-                                <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
-                                <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-            <a href="#" class="show_more"> показать еще</a>
-    </div>
-         <div class="section_map_3">
-       <h3 class="second_map">отчеты о прошедших
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<div class="event_img">
+																<div class="jcarousel">
+																	<ul>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_2.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_3.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																	</ul>
+																</div>
+																<div class="gray_box">
+																	<div class="photo_video">
+																		<p>4 фото</p>
+																		<p>1 видео</p>
+																	</div>
+																	<div class="jcarousel-control">
+																		<a href="#" class="jcarousel-control-prev left_event">
+																			<i class="sprite sprite-left"></i>
+																		</a>
+																		<a href="#" class="jcarousel-control-next right_event">
+																			<i class="sprite sprite-right"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<div class="event_img">
+																<div class="jcarousel">
+																	<ul>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_2.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_3.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																	</ul>
+																</div>
+																<div class="gray_box">
+																	<div class="photo_video">
+																		<p>4 фото</p>
+																		<p>1 видео</p>
+																	</div>
+																	<div class="jcarousel-control">
+																		<a href="#" class="jcarousel-control-prev left_event">
+																			<i class="sprite sprite-left"></i>
+																		</a>
+																		<a href="#" class="jcarousel-control-next right_event">
+																			<i class="sprite sprite-right"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<div class="event_img">
+																<div class="jcarousel">
+																	<ul>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_2.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_3.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																	</ul>
+																</div>
+																<div class="gray_box">
+																	<div class="photo_video">
+																		<p>4 фото</p>
+																		<p>1 видео</p>
+																	</div>
+																	<div class="jcarousel-control">
+																		<a href="#" class="jcarousel-control-prev left_event">
+																			<i class="sprite sprite-left"></i>
+																		</a>
+																		<a href="#" class="jcarousel-control-next right_event">
+																			<i class="sprite sprite-right"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<a href="#" class="show_more"> показать еще</a>
+													</div>
+													<div class="section_map_3">
+														<h3 class="second_map">отчеты о прошедших
 мероприятиях на
 отобранных трассах</h3>
-   <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <div class="event_img">
-                        <div class="jcarousel">
-                            <ul>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_2.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_3.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gray_box">
-                            <div class="photo_video">
-                                <p>4 фото</p>
-                                <p>1 видео</p>
-                            </div>
-                            <div class="jcarousel-control">
-                                <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
-                                <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                   <div class="event_img">
-                        <div class="jcarousel">
-                            <ul>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_2.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_3.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gray_box">
-                            <div class="photo_video">
-                                <p>4 фото</p>
-                                <p>1 видео</p>
-                            </div>
-                            <div class="jcarousel-control">
-                                <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
-                                <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <div class="event_img">
-                        <div class="jcarousel">
-                            <ul>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_2.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_3.png" alt="picture" width="240" height="240"/>
-                                </li>
-                                <li>
-                                    <img src="images/event_1.png" alt="picture" width="240" height="240"/>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gray_box">
-                            <div class="photo_video">
-                                <p>4 фото</p>
-                                <p>1 видео</p>
-                            </div>
-                            <div class="jcarousel-control">
-                                <a href="#" class="jcarousel-control-prev left_event"><i class="sprite sprite-left"></i></a>
-                                <a href="#" class="jcarousel-control-next right_event"><i class="sprite sprite-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-             <div class="event_map">
-                    <i class="sprite sprite-time"></i>
-                    <p class="time_event_map"> 12.08.2016</p>
-                    <div class="event_img"><img src="images/event_3.png" alt="picture" width="240" height="240"/>
-                    </div>
-                    <a href="#"><h3 class="header_par">4-ый этап Чемпионата МСК
-                        по RC-Триал-Трофи 2013</h3></a>
-                     <p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
-                     <i class="sprite sprite-eye"></i>
-                    <p class="visited_map">7</p>
-                    <i class="sprite sprite-comment"></i>
-                    <p class="comment_map">2</p>
-                    <div class="clear">
-                    </div>
-                    <a href="#" class="more_map">Подробнее</a>
-            </div>
-            <a href="#" class="show_more"> показать еще</a>
-    </div>
-    </div>
-    </div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<div class="event_img">
+																<div class="jcarousel">
+																	<ul>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_2.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_3.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																	</ul>
+																</div>
+																<div class="gray_box">
+																	<div class="photo_video">
+																		<p>4 фото</p>
+																		<p>1 видео</p>
+																	</div>
+																	<div class="jcarousel-control">
+																		<a href="#" class="jcarousel-control-prev left_event">
+																			<i class="sprite sprite-left"></i>
+																		</a>
+																		<a href="#" class="jcarousel-control-next right_event">
+																			<i class="sprite sprite-right"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<div class="event_img">
+																<div class="jcarousel">
+																	<ul>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_2.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_3.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																	</ul>
+																</div>
+																<div class="gray_box">
+																	<div class="photo_video">
+																		<p>4 фото</p>
+																		<p>1 видео</p>
+																	</div>
+																	<div class="jcarousel-control">
+																		<a href="#" class="jcarousel-control-prev left_event">
+																			<i class="sprite sprite-left"></i>
+																		</a>
+																		<a href="#" class="jcarousel-control-next right_event">
+																			<i class="sprite sprite-right"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<div class="event_img">
+																<div class="jcarousel">
+																	<ul>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_2.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_3.png" alt="picture" width="240" height="240"/>
+																		</li>
+																		<li>
+																			<img src="images/event_1.png" alt="picture" width="240" height="240"/>
+																		</li>
+																	</ul>
+																</div>
+																<div class="gray_box">
+																	<div class="photo_video">
+																		<p>4 фото</p>
+																		<p>1 видео</p>
+																	</div>
+																	<div class="jcarousel-control">
+																		<a href="#" class="jcarousel-control-prev left_event">
+																			<i class="sprite sprite-left"></i>
+																		</a>
+																		<a href="#" class="jcarousel-control-next right_event">
+																			<i class="sprite sprite-right"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<div class="event_map">
+															<i class="sprite sprite-time"></i>
+															<p class="time_event_map"> 12.08.2016</p>
+															<div class="event_img">
+																<img src="images/event_3.png" alt="picture" width="240" height="240"/>
+															</div>
+															<a href="#">
+																<h3 class="header_par">4-ый этап Чемпионата МСК
+                        по RC-Триал-Трофи 2013</h3>
+															</a>
+															<p>Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! рамки и место обучения кадров. </p>
+															<i class="sprite sprite-eye"></i>
+															<p class="visited_map">7</p>
+															<i class="sprite sprite-comment"></i>
+															<p class="comment_map">2</p>
+															<div class="clear"></div>
+															<a href="#" class="more_map">Подробнее</a>
+														</div>
+														<a href="#" class="show_more"> показать еще</a>
+													</div>
+												</div>
+											</div>
 
 {% endblock %}
-     <script src="js/index.js"></script>
-</body>
-</html>
+
+											<script src="js/index.js"></script>
+										</body>
+									</html>

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="040f35da-44e9-4f6f-bdfd-c8eca89f327c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/base.html" afterPath="$PROJECT_DIR$/main/templates/main/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/index.html" afterPath="$PROJECT_DIR$/main/templates/main/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/main/pagenews.html" afterPath="$PROJECT_DIR$/main/templates/main/pagenews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/track_map/admin.py" afterPath="$PROJECT_DIR$/track_map/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/track_map/models.py" afterPath="$PROJECT_DIR$/track_map/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/track_map/templates/track_map/track_index.html" afterPath="$PROJECT_DIR$/track_map/templates/track_map/track_index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,30 +42,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1339">
-              <caret line="105" column="36" lean-forward="true" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-              <folding>
-                <element signature="e#25#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/templates/main/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,17 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="banner.jpeg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/static/main/images/banner.jpeg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/templates/main/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
+            <state relative-caret-position="680">
               <caret line="186" column="50" lean-forward="false" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="50" />
               <folding />
             </state>
@@ -99,7 +68,7 @@
       <file leaf-file-name="pagenews.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/templates/main/pagenews.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
+            <state relative-caret-position="608">
               <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
               <folding />
             </state>
@@ -109,31 +78,55 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rcevo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2538">
+            <state relative-caret-position="702">
               <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/forms.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/track_map/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
               <folding>
-                <element signature="e#70#94#0" expanded="true" />
+                <element signature="e#25#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/templates/main/registration_form.html">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="371">
+              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/track_map/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="track_index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/track_map/templates/track_map/track_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,6 +171,7 @@
       <find>4 фото</find>
       <find>staticfiles</find>
       <find>banner.jpeg</find>
+      <find>track_t</find>
       <find>static</find>
     </findStrings>
   </component>
@@ -197,9 +191,6 @@
         <option value="$PROJECT_DIR$/main/admin.py" />
         <option value="$PROJECT_DIR$/track_map/urls.py" />
         <option value="$PROJECT_DIR$/track_map/views.py" />
-        <option value="$PROJECT_DIR$/track_map/templates/track_map/track_index.html" />
-        <option value="$PROJECT_DIR$/track_map/models.py" />
-        <option value="$PROJECT_DIR$/track_map/admin.py" />
         <option value="$PROJECT_DIR$/main/static/main/styles/style.css" />
         <option value="$PROJECT_DIR$/main/templates/main/Back_up.html" />
         <option value="$PROJECT_DIR$/rcevo/urls.py" />
@@ -212,6 +203,9 @@
         <option value="$PROJECT_DIR$/main/templates/main/index.html" />
         <option value="$PROJECT_DIR$/main/templates/main/pagenews.html" />
         <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/track_map/templates/track_map/track_index.html" />
+        <option value="$PROJECT_DIR$/track_map/admin.py" />
+        <option value="$PROJECT_DIR$/track_map/models.py" />
       </list>
     </option>
   </component>
@@ -337,54 +331,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workrcevo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -830,9 +776,9 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20537634" sideWeight="0.4932687" order="7" side_tool="false" content_ui="tabs" x="63" y="52" width="1857" height="1028" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20537634" sideWeight="0.4932687" order="7" side_tool="false" content_ui="tabs" x="63" y="52" width="1857" height="1028" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495226" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2204301" sideWeight="0.49434572" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2204301" sideWeight="0.49434572" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.49806738" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -995,39 +941,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/track_map/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rcevoenv/local/lib/python2.7/site-packages/django/contrib/admin/options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="1827" column="4" lean-forward="false" selection-start-line="1827" selection-start-column="4" selection-end-line="1827" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/track_map/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/track_map/templates/track_map/track_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="80" column="22" lean-forward="false" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1146,24 +1063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rcevo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2538">
-          <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#70#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/static/main/images/event_1(1).png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1184,12 +1083,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/models.py">
+    <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="90">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#25#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1197,14 +1096,6 @@
     <entry file="file://$PROJECT_DIR$/main/static/main/images/banner.jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/templates/main/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="186" column="50" lean-forward="false" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="50" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/templates/main/index.html">
@@ -1218,20 +1109,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#70#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/templates/main/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="186" column="50" lean-forward="false" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rcevo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/templates/main/pagenews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
+        <state relative-caret-position="608">
           <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/views.py">
+    <entry file="file://$PROJECT_DIR$/track_map/templates/track_map/track_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1339">
-          <caret line="105" column="36" lean-forward="true" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+        <state relative-caret-position="217">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="78" lean-forward="false" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="78" />
+          <folding>
+            <element signature="e#24#56#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/track_map/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
             <element signature="e#25#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/track_map/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

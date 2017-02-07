@@ -37,7 +37,6 @@ def news_information(slug):
     news.save()
 
 
-
     context = {
         'news': news,
         'form': form,
