@@ -24,7 +24,6 @@ class Model_for_tracks_admin(admin.ModelAdmin):
     ]
 
 
-
 admin.site.register(Types_db)
 admin.site.register(Model_for_tracks, Model_for_tracks_admin)
 admin.site.register(Pictures_for_track, For_pictures)
