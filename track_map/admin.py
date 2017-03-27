@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from django.contrib import admin
-from .models import Model_for_tracks, Pictures_for_track, Types_db, Types_of_tracks
+from .models import Model_for_tracks, Pictures_for_track, Types_db, \
+    Types_of_tracks
 
 
 class Connection_with_track_types(admin.TabularInline):
@@ -17,7 +18,8 @@ class Connection_with_pictures(admin.TabularInline):
 
 
 class Model_for_tracks_admin(admin.ModelAdmin):
-    fields = ('track_name', 'track_title_picture', 'track_adress', 'track_information')
+    fields = ('track_name', 'track_title_picture', 'track_adress',
+              'track_information')
     inlines = [
         Connection_with_pictures,
         Connection_with_track_types,
