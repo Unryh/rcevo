@@ -30,25 +30,28 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    #allauth
-    'django.contrib.sites',
+ADDITIONAL_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.vk',
-    #allauth
     'widget_tweaks',  # add css to forms
     'track_map.apps.TrackMapConfig',
     'main.apps.MainConfig',
+]
+
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 ]
+
+INSTALLED_APPS = DJANGO_APPS + ADDITIONAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,6 +137,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -145,3 +149,10 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
+
+# new
+STATIC_ROOT = os.path.join(BASE_DIR, 'mytest')
+
+STATICFILES_DIRS = [
+    '/home/albert/workrcevo/main/static',
+]

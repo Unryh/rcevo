@@ -9,14 +9,14 @@
 			<li>
 				<a  href="{% url 'main:index' %}" >Главная</a>&rsaquo;
 			</li>
-			<li>Новости</li>
+			<li>Новости
+            </li>
 		</ul>
 		<div class="clear"></div>
 		<div class="type_img">
 			<div class="jcarousel">
 				<ul>
                        {% for news_picture in pictures %}
-
 					<li>
 						<img src="{{ news_picture.picture.url }}" alt="picture" width="1024" height="576">
                     </li>
@@ -38,17 +38,17 @@
 						</div>
 					</div>
 					<div class="graybig_box">
-						<p class="type_time">{{news.news_posting_time }}</p>
-						<p class="type_visited">{{news.news_views_count}}</p>
-						<p class="type_comment">{{news.news_comments_count}}</p>
+						<p class="type_time">{{news.posting_time }}</p>
+						<p class="type_visited">{{news.views_count}}</p>
+						<p class="type_comment">{{news.comments_count}}</p>
 					</div>
 				</div>
 			</div>
 			<div class="pagenews_content">
-				<h2 class="header_road">{{news.news_title}}</h2>
-				<p>{{news.news_text}}</p>
+				<h2 class="header_road">{{news.title}}</h2>
+				<p>{{news.text}}</p>
 			</div>
-			<h4>{{news.news_comments_count}} comments</h4>
+			<h4>{{news.comments_count}} comments</h4>
              {% for comment in user_comments %}
 
 			<div class="list_comment">

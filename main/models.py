@@ -3,21 +3,20 @@ from __future__ import unicode_literals
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
-from datetime import datetime
 
 
-class News_post(models.Model):
-    news_title_picture = models.FileField()
-    news_title = models.CharField(max_length=100)
+class NewsPost(models.Model):
+    title = models.CharField(max_length=100)
+    title_picture = models.FileField()
     slug = models.SlugField(max_length=200)
-    news_posting_time = models.DateTimeField(auto_now_add='true')
-    news_anotation = models.TextField(max_length=200)
-    news_text = models.TextField(max_length=10000)
-    news_views_count = models.IntegerField(default=0)
-    news_comments_count = models.IntegerField(default=0)
+    posting_time = models.DateTimeField(auto_now_add='true')
+    annotation = models.TextField(max_length=200)
+    text = models.TextField(max_length=10000)
+    views_count = models.IntegerField(default=0)
+    comments_count = models.IntegerField(default=0)
 
     def __unicode__(self):
-        return self.news_title
+        return self.title
 
     def get_absolute_url(self):
         return reverse('main:news_details', kwargs={'slug':self.slug})
@@ -29,8 +28,8 @@ class Advanced_user(User):
 
 class Comment_model(models.Model):
     user_nickname = models.ForeignKey(Advanced_user, models.CASCADE,)
-    article = models.ForeignKey(News_post, models.CASCADE,)
-    parent = models.ForeignKey('self', blank=True, null=True)
+    article = models.ForeignKey(NewsPost, models.CASCADE, )
+    # parent = models.ForeignKey('self', blank=True, null=True)
     text = models.TextField(max_length=1000)
     time_created = models.DateTimeField(auto_now_add='true')
 
@@ -42,6 +41,6 @@ class Comment_model(models.Model):
         return a.avatar.url
 
 
-class Pictures_for_news(models.Model):
-    parent_news = models.ForeignKey(News_post, models.CASCADE,)
+class Picture_for_news(models.Model):
+    news_id = models.ForeignKey(NewsPost, models.CASCADE, )
     picture = models.FileField(default='media')

@@ -71,18 +71,18 @@
       {% for news in all_news %}
        <div class="section">
         <div class="picture">
-            <a href="{{ news.get_absolute_url }}"><img src="{{news.news_title_picture.url}}" alt="picture" width="502" height="280" /></a>
+            <a href="{{ news.get_absolute_url }}"><img src="{{news.title_picture.url}}" alt="picture" width="502" height="280" /></a>
         </div>
             <div class="content">
                 <i class="sprite sprite-time"></i>
-                <p class="time"> {{ news.news_posting_time }}</p>
-                <h3>{{ news.news_title }}</h3>
-                <p>{{ news.news_anotation }}</p>
+                <p class="time"> {{ news.posting_time }}</p>
+                <h3>{{ news.title }}</h3>
+                <p>{{ news.anotation }}</p>
                 <a href="{{ news.get_absolute_url }}" class="more_1">Подробнее</a>
                 <i class="sprite sprite-eye"></i>
-                <p class="visited">{{ news.news_views_count }}</p>
+                <p class="visited">{{ news.views_count }}</p>
                 <i class="sprite sprite-comment"></i>
-                <p class="comment">{{ news.news_comments_count }}</p>
+                <p class="comment">{{ news.comments_count }}</p>
             </div>
        </div>
      <div class="clear">
