@@ -23,7 +23,8 @@ class NewsPost(models.Model):
 
 
 class Advanced_user(User):
-    avatar = models.FileField(upload_to='media', blank=True)
+    avatar = models.FileField(upload_to='media', blank=True,
+                              default='/home/albert/IMG_958.JPG')
 
 
 class Comment_model(models.Model):

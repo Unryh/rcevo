@@ -54,8 +54,6 @@ def news_details(request, slug):
     form = Comment_form(request.POST or None)
     if form.is_valid():
         comment = form.save(commit=False)
-        # current_user_model = get_user_model()
-        # comment.user_nickname = current_user_model.objects.get(pk=request.user.pk)
         comment.user_nickname = Advanced_user.objects.get(pk=request.user.pk)
         comment.article = get_object_or_404(NewsPost, slug=slug)
         comment.save()
@@ -72,26 +70,26 @@ def news_details(request, slug):
 
 
 def register_user(request):
-    form = UserForm(request.POST or None, request.FILES or None)
-    if form.is_valid():
-        user = form.save(commit=False)
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password']
-        user.set_password(password)
-        user.save()
-        user = authenticate(username=username, password=password)
+    context = dict()
+    if request.method == 'POST':
+        form = UserForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            user = form.save(commit=False)
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user.set_password(password)
+            user.save()
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('main:index')
+        else:
+            # context.update(message='Form is not valid')
+            context.update(form=form)
+            return render(request, 'main/registration_form.html', context)
 
-        if user is not None:
-
-            if user.is_active:
-
-                login(request, user)
-                return redirect('main:index')
-
-        return redirect('main:index')
-    else:
-        form = UserForm()
-        return render(request, 'main/registration_form.html', {'form': form})
+    form = UserForm()
+    context.update(form=form)
+    return render(request, 'main/registration_form.html', context)
 
 
 def login_user(request):
