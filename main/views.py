@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# from django.views import generic
-# from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm, Comment_form
-from .models import NewsPost, Advanced_user, Comment_model, Picture_for_news
+from models.models import NewsPost, AdvancedUser, CommentModel, PictureForNews
 # from django.contrib.auth.models import User
 # from django.contrib.auth import get_user_model
 
@@ -20,21 +18,20 @@ def index(request):
 
 def news_information(slug):
     """обновляем счетчик просмотра"""
-    news = NewsPost.objects.get(slug=slug)
+    news = NewsPost.objects.get_news_by_slug(slug)
+    # news = NewsPost.objects.get(slug=slug)
     NewsPost.objects.filter(slug=slug).update(views_count=
-                                               news.views_count + 1)
+                                              news.views_count + 1)
 
     """достаем всю необходимую для страницы информацию"""
-    news = NewsPost.objects.get(slug=slug)
     form = Comment_form(initial={'text': 'Добавить комментарий'})
-    user_comments = Comment_model.objects.filter(article=news.pk)
+    user_comments = CommentModel.objects.get_comments_for_news(news=news.pk)
     comment_count = len(user_comments)
-    pictures = Picture_for_news.objects.filter(news_id=news.pk)
+    pictures = PictureForNews.objects.filter(news=news.pk)
     number_of_pictures = len(pictures)
 
     """пересчитываю количество комментариев на странице"""
     news.comments_count = comment_count
-    news.save()
 
     context = {
         'news': news,
@@ -54,17 +51,17 @@ def news_details(request, slug):
     form = Comment_form(request.POST or None)
     if form.is_valid():
         comment = form.save(commit=False)
-        comment.user_nickname = Advanced_user.objects.get(pk=request.user.pk)
-        comment.article = get_object_or_404(NewsPost, slug=slug)
+        comment.user_nickname = AdvancedUser.objects.get(pk=request.user.pk)
+        comment.news = get_object_or_404(NewsPost, slug=slug)
         comment.save()
+        context = news_information(slug)
 
-    context = news_information(slug)
     return render(request, 'main/pagenews.html', context)
 
 
 # def social_redirect(request):
 #     a = User.objects.get(pk=request.user.pk)
-#     b = Advanced_user(username=a.username, password=a.password, email=a.email, avatar='blank')
+#     b = AdvancedUser(username=a.username, password=a.password, email=a.email, avatar='blank')
 #     b.save()
 #     return index(request)
 

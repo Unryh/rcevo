@@ -1,21 +1,21 @@
 {% extends 'main/base.html' %}
+
+{% block title %} Registration {% endblock %}
+
 {% block body %}
+
     {% if message %}
         <p><strong>{{ message }}</strong></p>
     {% endif %}
     {% if form.non_field_errors %}
         <p><strong>{{ form.non_field_errors }}</strong></p>
     {% endif %}
-{#    {% if error_messages %}#}
-{#        <p><strong>{{ form.error_messages }}</strong></p>#}
-{#    {% endif %}#}
-      <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+
+      <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {% include 'main/form_template.html' %}
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-success">Submit</button>
-          </div>
-        </div>
+         <div>
+           <button type="submit">Submit</button>
+         </div>
       </form>
 {% endblock %}

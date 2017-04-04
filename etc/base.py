@@ -39,6 +39,7 @@ ADDITIONAL_APPS = [
     'widget_tweaks',  # add css to forms
     'track_map.apps.TrackMapConfig',
     'main.apps.MainConfig',
+    'debug_toolbar',
 ]
 
 DJANGO_APPS = [
@@ -54,6 +55,7 @@ DJANGO_APPS = [
 INSTALLED_APPS = DJANGO_APPS + ADDITIONAL_APPS
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -156,3 +158,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'mytest')
 STATICFILES_DIRS = [
     '/home/albert/workrcevo/main/static',
 ]
+
+INTERNAL_IPS = ['127.0.0.1']

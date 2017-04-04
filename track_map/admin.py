@@ -24,6 +24,7 @@ class TracksAdmin(admin.ModelAdmin):
         ConnectionWithTrackTypes,
     ]
 
+
 class TypesOfTrackAdmin(admin.ModelAdmin):
     list_display = ('track_id', 'track_type')
 

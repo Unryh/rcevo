@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # from django.contrib.auth.models import User
 from django import forms
-from .models import Advanced_user, Comment_model
+from models.models import AdvancedUser, CommentModel
 
 
 class UserForm(forms.ModelForm):
@@ -12,7 +12,7 @@ class UserForm(forms.ModelForm):
                                       max_length=40)
 
     class Meta:
-        model = Advanced_user
+        model = AdvancedUser
         fields = ['username', 'password', 'email', 'avatar']
 
     def clean(self):
@@ -22,7 +22,7 @@ class UserForm(forms.ModelForm):
             raise forms.ValidationError("Passwords don't match")
 
         username = self.cleaned_data.get("username")
-        user = Advanced_user.objects.filter(username=username)
+        user = AdvancedUser.objects.filter(username=username)
         if user.exists():
             raise forms.ValidationError("username already taken")
 
@@ -31,7 +31,7 @@ class UserForm(forms.ModelForm):
 class Comment_form(forms.ModelForm):
 
     class Meta:
-        model = Comment_model
+        model = CommentModel
         fields = ['text']
 
 

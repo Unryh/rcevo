@@ -1,30 +1,30 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import NewsPost, Advanced_user, Comment_model, Picture_for_news
+from models.models import NewsPost, AdvancedUser, CommentModel, PictureForNews
 
 
-class For_pictures(admin.ModelAdmin):
-    list_display = ('news_id', 'picture')
+class ForPictures(admin.ModelAdmin):
+    list_display = ('news', 'picture')
 
 
-class Connection_with_picture(admin.TabularInline):
-    model = Picture_for_news
+class ConnectionWithPicture(admin.TabularInline):
+    model = PictureForNews
 
 
-class News_postAdmin(admin.ModelAdmin):
+class NewsPostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'posting_time')
     list_filter = ['slug']
     search_fields = ['title']
-    fields = ('title', 'slug', 'annotation', 'text', 'title_picture', )
+    fields = ('title', 'slug', 'annotation', 'text', 'title_picture')
 
     inlines = [
-        Connection_with_picture,
+        ConnectionWithPicture,
     ]
 
 
-admin.site.register(NewsPost, News_postAdmin)
-admin.site.register(Advanced_user)
-admin.site.register(Comment_model)
-admin.site.register(Picture_for_news, For_pictures)
+admin.site.register(NewsPost, NewsPostAdmin)
+admin.site.register(AdvancedUser)
+admin.site.register(CommentModel)
+admin.site.register(PictureForNews, ForPictures)
 

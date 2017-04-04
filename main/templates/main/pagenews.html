@@ -1,4 +1,7 @@
 {% extends 'main/base.html' %}
+
+{% block title %} RC EVOLUTION {% endblock %}
+
 {% block body %}
 
 
@@ -9,8 +12,7 @@
 			<li>
 				<a  href="{% url 'main:index' %}" >Главная</a>&rsaquo;
 			</li>
-			<li>Новости
-            </li>
+			<li>Новости</li>
 		</ul>
 		<div class="clear"></div>
 		<div class="type_img">
@@ -52,7 +54,7 @@
              {% for comment in user_comments %}
 
 			<div class="list_comment">
-				<img src="{{ comment.get_user_avatar }}" alt="Avatar" width="67" height="67">
+				<img src="{{ comment.user_nickname.avatar.url }}" alt="Avatar" width="67" height="67">
 					<p class="nickname">{{ comment.user_nickname }}</p>
 					<i class="sprite sprite-time"></i>
 					<p class="time">{{ comment.time_created }}</p>
