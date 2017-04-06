@@ -11,9 +11,19 @@
         <p><strong>{{ form.non_field_errors }}</strong></p>
     {% endif %}
 
-      <form action="" method="post" enctype="multipart/form-data">
+      <form action="{% url 'main:register_user' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {% include 'main/form_template.html' %}
+        {% for field in form %}
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <span class="text-danger small">{{ field.errors }}</span>
+            </div>
+              <label class="control-label col-sm-2">{{ field.label_tag }}</label>
+            <div class="col-sm-10">
+              {{ field }}
+            </div>
+          </div>
+        {% endfor %}
          <div>
            <button type="submit">Submit</button>
          </div>

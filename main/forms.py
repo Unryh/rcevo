@@ -2,18 +2,28 @@
 # from django.contrib.auth.models import User
 from django import forms
 from models.models import AdvancedUser, CommentModel
+import django.forms.widgets as widgets
 
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(min_length=3, max_length=40)
     password = forms.CharField(widget=forms.PasswordInput, min_length=5,
                                max_length=40)
-    repeat_password = forms.CharField(widget=forms.PasswordInput, min_length=5,
-                                      max_length=40)
+    repeat_password = forms.CharField(
+        widget=widgets.PasswordInput(attrs={
+            'placeholder': 'repeat password',
+        }),
+        min_length=5,
+        max_length=40,
+        required=True,
+        error_messages={
+            'required': 'please repeat password'
+        }
+    )
 
     class Meta:
         model = AdvancedUser
-        fields = ['username', 'password', 'email', 'avatar']
+        fields = ['username', 'password', 'repeat_password', 'email', 'avatar']
 
     def clean(self):
         password = self.cleaned_data.get("password")

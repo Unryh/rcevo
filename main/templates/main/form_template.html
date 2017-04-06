@@ -1,55 +1,55 @@
-{#{% for field in form %}#}
-{#  <div class="form-group">#}
-{#    <div class="col-sm-offset-2 col-sm-10">#}
-{#      <span class="text-danger small">{{ field.errors }}</span>#}
-{#    </div>#}
-{#      <label class="control-label col-sm-2">{{ field.label_tag }}</label>#}
-{#    <div class="col-sm-10">#}
-{#      {{ field }}#}
+{% for field in form %}
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <span class="text-danger small">{{ field.errors }}</span>
+    </div>
+      <label class="control-label col-sm-2">{{ field.label_tag }}</label>
+    <div class="col-sm-10">
+      {{ field }}
+    </div>
+  </div>
+{% endfor %}
+
+{#  <div>#}
+{#      <span>{{ form.username.errors }}</span>#}
+{#      <label">{{ form.username.label_tag }}</label>#}
+{#    <div>#}
+{#      {{ form.username }}#}
 {#    </div>#}
 {#  </div>#}
-{#{% endfor %}#}
-
-  <div>
-      <span>{{ form.username.errors }}</span>
-      <label">{{ form.username.label_tag }}</label>
-    <div>
-      {{ form.username }}
-    </div>
-  </div>
-  <div>
-    <div>
-      <span>{{ form.password.errors }}</span>
-    </div>
-      <label>{{ form.password.label_tag }}</label>
-    <div>
-      {{ form.password }}
-    </div>
-  </div>
-  <div>
-    <div>
-      <span>{{ form.repeat_password.errors }}</span>
-    </div>
-      <label>{{ form.repeat_password.label_tag }}</label>
-    <div>
-      {{ form.repeat_password }}
-    </div>
-  </div>
-  <div>
-    <div>
-      <span>{{ form.email.errors }}</span>
-    </div>
-      <label>{{ form.email.label_tag }}</label>
-    <div>
-      {{ form.email }}
-    </div>
-  </div>
-  <div>
-    <div>
-      <span>{{ form.avatar.errors }}</span>
-    </div>
-      <label>{{ form.avatar.label_tag }}</label>
-    <div>
-      {{ form.avatar }}
-    </div>
-  </div>
+{#  <div>#}
+{#    <div>#}
+{#      <span>{{ form.password.errors }}</span>#}
+{#    </div>#}
+{#      <label>{{ form.password.label_tag }}</label>#}
+{#    <div>#}
+{#      {{ form.password }}#}
+{#    </div>#}
+{#  </div>#}
+{#  <div>#}
+{#    <div>#}
+{#      <span>{{ form.repeat_password.errors }}</span>#}
+{#    </div>#}
+{#      <label>{{ form.repeat_password.label_tag }}</label>#}
+{#    <div>#}
+{#      {{ form.repeat_password }}#}
+{#    </div>#}
+{#  </div>#}
+{#  <div>#}
+{#    <div>#}
+{#      <span>{{ form.email.errors }}</span>#}
+{#    </div>#}
+{#      <label>{{ form.email.label_tag }}</label>#}
+{#    <div>#}
+{#      {{ form.email }}#}
+{#    </div>#}
+{#  </div>#}
+{#  <div>#}
+{#    <div>#}
+{#      <span>{{ form.avatar.errors }}</span>#}
+{#    </div>#}
+{#      <label>{{ form.avatar.label_tag }}</label>#}
+{#    <div>#}
+{#      {{ form.avatar }}#}
+{#    </div>#}
+{#  </div>#}

@@ -44,6 +44,7 @@ def news_information(slug):
 
 
 def news_details(request, slug):
+
     if request.method == 'GET':
         context = news_information(slug)
         return render(request, 'main/pagenews.html', context)
@@ -57,13 +58,6 @@ def news_details(request, slug):
         context = news_information(slug)
 
     return render(request, 'main/pagenews.html', context)
-
-
-# def social_redirect(request):
-#     a = User.objects.get(pk=request.user.pk)
-#     b = AdvancedUser(username=a.username, password=a.password, email=a.email, avatar='blank')
-#     b.save()
-#     return index(request)
 
 
 def register_user(request):
@@ -80,7 +74,6 @@ def register_user(request):
             login(request, user)
             return redirect('main:index')
         else:
-            # context.update(message='Form is not valid')
             context.update(form=form)
             return render(request, 'main/registration_form.html', context)
 

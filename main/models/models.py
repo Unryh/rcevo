@@ -44,10 +44,6 @@ class CommentModel(models.Model):
     def __unicode__(self):
         return self.text[:30]
 
-    def get_user_avatar(self):
-        a = AdvancedUser.objects.get(username=self.user_nickname)
-        return a.avatar.url
-
 
 class PictureForNews(models.Model):
     news = models.ForeignKey(NewsPost, models.CASCADE, )
